@@ -5,6 +5,9 @@ $ColorPurple2: #5D4870;
 $ColorPurple5: #BD97CD;
 $ColorPurple6: #E4D9EB;
 $ColorCreme:   #F2EDE4;
+$ColorGray: #c0bbc5;
+
+
 
 .MainLayout{
     display: flex;
@@ -96,6 +99,67 @@ $ColorCreme:   #F2EDE4;
             height: 100%;
             width: 13vw;
             border-radius: 30px;
+        }
+    }
+    .MainContainer{
+        margin: 7vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        .MainText{
+            font-size:4vw;
+            font-weight: 300;
+        }
+        .SubText{
+            text-align: left;
+        }
+        .EmailContainer{
+            display: flex;
+            text-align: left;
+            background-color: $ColorGray;
+            width: 25%;
+            border-radius: 5px;
+            color: $ColorPurple6;
+            margin-bottom: 3vh;
+        }
+        .FormContainer{
+            display: flex;
+            flex-direction: column;
+            .OtpFormInput{
+                margin-bottom: 2vh;
+
+                .OtpInput{
+                    background-color: $ColorGray;
+                    text-align: center;
+                    border-radius: 5px;
+                    border: none;
+                    width: 6vw;
+                    height: 15vh;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    font-size: 50px;
+                }
+            }
+
+            .InfoContainer{
+                display: flex;
+                margin-bottom: 5vh;
+                color: $ColorGray;
+            
+                .TextAdvice{
+                    margin-left: 1vw;
+                }
+
+            }
+            .SubmitButton{
+                width: 40vw;
+                height: 10vh;
+                border-radius: 10px;
+                border-color: unset;
+                border-width: 0;
+                background-color: $ColorPurple1;
+            }
         }
     }
 }

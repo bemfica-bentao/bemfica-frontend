@@ -35,19 +35,19 @@ export default function OtpVerificationForm (){
                 
                 <h1 className='BemFicaTitle'>bemfica</h1>
 
-                {/* Da para componentizar isso aqui */}
+                {/* Da para compon+entizar isso aqui */}
                 <div className="StepsContainer">
                     <div className="StepFirst" />
                     <div className="StepSecond" />
                     <div className="StepThird" />
                 </div>
                 <main className="MainContainer">
-                    <h2>Código de verificação </h2>
-                    <p>Digite o código enviado <span className="ColorPurple1">para o seu e-mail =]</span></p>
+                    <h2 className='MainText'>Código de verificação </h2>
+                    <p className='SubText'>Digite o código enviado <span className="ColorPurple1">para o seu e-mail =]</span></p>
                         
                     {/* Da para componentizar isso aqui */}
                     <div className="EmailContainer">
-                        <p>imagem</p>
+                        <p>icon</p>
                         <p>jo****@etec.sp.gov.br</p>
                     </div>
 
@@ -60,17 +60,17 @@ export default function OtpVerificationForm (){
                             <input type="text" className="OtpInput" required/>
                         </div>
 
-                        <div>
+                        <div className='InfoContainer'>
                             <p>icone</p>
-                            <p>Apenas números. Cole o código diretamente</p>
+                            <p className='TextAdvice'>Apenas números. Cole o código diretamente</p>
                         </div>
                         
-                        <button type="submit"> Verificar código => </button>
+                        <button type="submit" className='SubmitButton'> Verificar código => </button>
 
                         <button type="button"> reenviar código</button>
                     </form>
 
-                    </main>
+                </main>
 
             </div>
         </div>
