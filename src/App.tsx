@@ -1,11 +1,12 @@
-import OtpVerificationForm from "./features/auth/components/OtpVerificationForm/OtpVerificationForm"
-
+// import OtpVerificationForm from "./features/auth/components/OtpVerificationForm/OtpVerificationForm"
+import TimeLineForm from "./features/auth/components/TimeLineForm/TimeLineForm"
 
 function App() {
 
   return (
     <>
-      <OtpVerificationForm />
+      {/* <OtpVerificationForm /> */}
+      <TimeLineForm />
     </>
   )
 }
