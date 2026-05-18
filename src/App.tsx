@@ -1,13 +1,14 @@
-// import OtpVerificationForm from "./features/auth/components/OtpVerificationForm/OtpVerificationForm"
+import OtpVerificationForm from "./features/auth/components/OtpVerificationForm/OtpVerificationForm"
+import { Routes, Route } from "react-router-dom"
 import TimeLineForm from "./features/auth/components/TimeLineForm/TimeLineForm"
 
 function App() {
 
   return (
-    <>
-      {/* <OtpVerificationForm /> */}
-      <TimeLineForm />
-    </>
+    <Routes>
+      <Route path="/otp" element={<OtpVerificationForm/>} />
+      <Route path="/status" element={<TimeLineForm />}/>      
+    </Routes>
   )
 }
 
