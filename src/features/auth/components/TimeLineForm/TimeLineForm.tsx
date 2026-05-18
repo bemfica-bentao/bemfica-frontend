@@ -51,7 +51,7 @@ export default function TimeLineForm(){
                             </div>
                             <div className='TitlesStepContainer'>
                                 <h2 className='TitleStep' id='enabled'>Pedido recebido !</h2>
-                                <p className='SubText' id='enabled'>Sua solicitação chegou ao sistema</p>
+                                <p className='SubText'>Sua solicitação chegou ao sistema</p>
                             </div>
                         </div>
                         <div className='TimeStepChildren'>
@@ -60,7 +60,7 @@ export default function TimeLineForm(){
                             </div>
                             <div className='TitlesStepContainer'>
                                 <h2 className='TitleStep' id='disabled'>Verificando dados</h2>
-                                <p className='SubText' id='disabled'>Sua solicitação está sendo verificada</p>
+                                <p className='SubText'>Sua solicitação está sendo verificada</p>
                             </div>
                         </div>
                         <div className='TimeStepChildren'>
@@ -69,7 +69,7 @@ export default function TimeLineForm(){
                             </div>
                             <div className='TitlesStepContainer'>
                                 <h2 className='TitleStep' id='disabled'>Pedido recebido !</h2>
-                                <p className='SubText' id='disabled'>Sua solicitação está sendo etiquetada</p>
+                                <p className='SubText'>Sua solicitação está sendo etiquetada</p>
                             </div>
                         </div>
                         <div className='TimeStepChildren'>
@@ -78,7 +78,7 @@ export default function TimeLineForm(){
                             </div>
                             <div className='TitlesStepContainer'>
                                 <h2 className='TitleStep' id='disabled'>Pedido recebido !</h2>
-                                <p className='SubText' id='disabled'>Sua solicitação foi aprovada</p>
+                                <p className='SubText' >Sua solicitação foi aprovada</p>
                             </div>
                         </div>
                         
