@@ -1,49 +1,69 @@
-import './LoginForm.scss'
+import './LoginForm.scss';
 
 export default function LoginForm() {
-
     return (
         <div className="LoginPage">
-            <nav>
-                <div>
+            {/* Lado Esquerdo, Formulário */}
+            <div className="LoginLeftContainer">
+                <div className="Header">
+                    <div className="Logo">
+                        <span>Bemfica</span>
+                    </div>
                     <button className="GoBackBtn">
-                        <a href="MainScreen"><i className="fa-solid fa-arrow-left"></i></a>
-                    </button><br></br>;
+                        <a href="/MainScreen"><i className="fa-solid fa-arrow-left"></i></a>
+                    </button>
                 </div>
-            </nav>
 
-            <main className="LoginForm">
-                <div>
-                    <h3>Login</h3>
-                    <h2>Acesse seu Perfil</h2>
-                    <br></br>
-                    <fieldset>
-                        <legend>Email</legend>
-                        <input type="email" placeholder="" />
-                    </fieldset>
-                    {/* <i class="fa-solid fa-envelope"></i> */}
-                    <br></br>
-                    <h5>Esqueceu sua senha?</h5>
-                    <fieldset>
-                        <legend>Senha</legend>
-                        <input type="password" placeholder="" />
-                    </fieldset>
-                    {/* <i class="fa-solid fa-lock"></i> */}
-                    {/* <i class="fa-solid fa-eye-slash"></i> */}
-                    {/* <i class="fa-solid fa-eye"></i> */}
-                    <br></br>
-                    <button className="LogInBtn">Entrar</button>
-                    <h5>Não tem uma conta? Registre-se</h5>
+                <main className="LoginForm">
+                    <div className="FormWrapper">
+                        <h1>LOGIN</h1>
+                        <h3>Acesse seu Perfil</h3>
+
+                        <div className="InputGroup">
+                            <fieldset>
+                                <legend>Email</legend>
+                                <div className="InputContent">
+                                    <i className="fa-regular fa-envelope"></i>
+                                    <input type="email" placeholder="" />
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div className="InputGroup">
+                            <a href="/esqueceu" className="ForgotLink">Esqueceu sua senha?</a>
+                            <fieldset>
+                                <legend>Senha</legend>
+                                <div className="InputContent">
+                                    <i className="fa-solid fa-lock"></i>
+                                    <input type="password" placeholder="" />
+                                    <i className="fa-regular fa-eye-slash clickable"></i>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <button className="LogInBtn">Entrar</button>
+                        <a href="/registro" className="RegisterLink">Não tem uma conta? Registre-se</a>
+                    </div>
+                </main>
+            </div>
+
+            {/* Lado Direito, Banner */}
+            <aside className="LoginRightContainer">
+
+                <div className="Decorations">
+                    <div className="circle circle-1"></div>
+                    <div className="circle circle-2"></div>
+                    <div className="circle circle-3"></div>
+                    <div className="circle circle-4"></div>
+                    <div className="circle circle-5"></div>
+                    <div className="circle circle-6"></div>
                 </div>
-            </main>
 
-            <aside>
-                <div>
-                    <h4>Acesse nossa Plataforma.</h4>
-                    <br></br>
-                    <h2>Veja seu Cardápio adaptado</h2>
+                <div className="RightContent">
+                    <h1>Acesse nossa <br /><span className="highlight">Plataforma</span><span className="dot">.</span></h1>
+                    <p>Veja seu Cardápio adaptado como Aluno <br />ou acesse todos como Funcionário.</p>
                 </div>
             </aside>
         </div>
-    )
+    );
 }
