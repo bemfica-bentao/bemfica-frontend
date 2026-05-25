@@ -1,0 +1,418 @@
+$ColorPurple3: #302D33;
+$ColorPurple4: #2B2233;
+$ColorPurple1: #7E45AF;
+$ColorPurple2: #5D4870;
+$ColorPurple5: #BD97CD;
+$ColorPurple6: #E4D9EB;
+$ColorCreme:   #F2EDE4;
+$ColorGray: #c0bbc5;
+
+
+.ColorPurple1{
+    color: $ColorPurple1;
+}
+.ColorPurple2{
+    color: $ColorPurple2;
+}
+.ColorPurple3{
+    color: $ColorPurple3;
+}
+.ColorPurple4{
+    color: $ColorPurple4
+}
+.ColorPurple5{
+    color: $ColorPurple5
+}
+
+.ColorCreme{
+    color: $ColorCreme;
+}
+
+.MainLayout{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.LeftContainer{
+    width: 50vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .LeftTextContainer {
+    padding: 80px;
+    .FirstTextContainer{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-top: 120px;
+        .FirstText {
+            color: $ColorCreme;
+            font-size: 200px;
+            font-weight: bold;
+        }
+    }
+    
+    .SecondText {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+}
+
+.LineStar{
+    position: relative;
+    bottom: 50px;
+    width: 700px;
+}
+
+.LineContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: -385px;
+        right: -50px;
+        .Line{
+            background-color: $ColorPurple1;
+            width: 14px;
+            height: 540px;
+        }
+        .Star{
+        position: relative;
+            bottom: 20px;
+        }
+    }
+}
+
+.RightContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 60px;
+
+    .BemFicaTitle{
+        color: $ColorPurple1;
+        font-size: 50px;
+
+    }
+
+    .StepsContainer{
+        display: flex;
+        height: 20px;
+        width: 750px;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        .StepFirst{
+            background-color: $ColorPurple2;
+            width: 230px;
+            border-radius: 30px;
+        }
+        .StepSecond{
+            background-color: $ColorPurple5;
+            width: 230px;
+            border-radius: 30px;
+        }
+        .StepThird{
+            background-color: $ColorPurple6;
+            width: 230px;
+            border-radius: 30px;
+        }
+    }
+    .MainContainer{
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        
+        .MainTitles{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            align-items: center;
+
+            
+            .MainText{
+                font-size:60px;
+                font-weight: 300;
+                margin-bottom: 10px;
+                color: $ColorPurple2;
+            }
+            
+            
+        }
+            .EmailContainer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $ColorGray;
+                width: 250px;
+                height: 50px;
+                border-radius: 5px;
+                color: $ColorPurple1;
+                margin-bottom: 40px;
+
+                .fa-envelope{
+                    margin-right: 3%;
+                }
+            }
+        
+
+        .FormContainer{
+            display: flex;
+            flex-direction: column;
+            .OtpFormInput{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 2vh;
+                .OtpInput{
+                    background-color: $ColorGray;
+                    text-align: center;
+                    border-radius: 5px;
+                    border: none;
+                    width: 110px;
+                    height: 120px;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    font-size: 50px;
+                }
+            }
+
+            .InfoContainer{
+                display: flex;
+                align-items: center;
+                margin-bottom: 5vh;
+                color: $ColorGray;
+            
+                .TextAdvice{
+                    margin-left: 10px;
+                }
+
+            }
+            .ButtonsContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .SubmitButton{
+                    height: 100px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border-color: unset;
+                    border-width: 0;
+                    background-color: $ColorPurple1;
+                    color: $ColorCreme;
+                    font-size: 40px;
+                    cursor: pointer;
+                    margin-bottom: 80px;
+                }
+                .ResendButton{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width:180px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border-color: unset;
+                    background-color: unset;
+                    border-width: 0;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+    .TimeLineStepContainer{
+                display: flex;
+                flex-direction: column;
+                .TimeStepChildren{
+                    display: flex;
+                    justify-self: center;
+                    align-items: center;
+                    flex-direction: row;
+                    margin-bottom: 50px;
+                    
+                    .TitlesStepContainer{
+                        margin-left: 15px;
+                        
+                    }
+                }
+        }
+        .SubText{
+                text-align: left;
+                color: $ColorGray;
+            }
+        div#disabled {
+
+                border: 3px solid $ColorPurple6;
+
+                background-color: unset;
+            
+        }
+        div#enabled{
+                background-color: $ColorPurple1;
+                
+        }
+        p#enabled{   
+            color: $ColorCreme; 
+            
+        }
+        div#focus {
+        border: 3px solid $ColorPurple1; 
+    }
+        p#disabled{
+            color: $ColorPurple1;
+        }
+        
+        .Icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $ColorPurple6;
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                font-size: 50px;
+                color: $ColorPurple1;
+        }
+        
+        .TitleStep{
+            color: $ColorPurple2;
+            font-size: 40px;
+        }
+}
+
+@media (max-width: 1500px) {
+  .MainLayout {
+    flex-direction: column;
+  }
+
+  .LeftContainer {
+    display: none;
+  }
+
+  .RightContainer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    .BemFicaTitle {
+      font-size: 60px;
+    }
+
+    .StepsContainer {
+      width: 100%;
+
+      .StepFirst,
+      .StepSecond,
+      .StepThird {
+        width: 100%;
+      }
+    }
+    
+    .MainContainer {
+      width: 100%;
+
+      .MainTitles {
+        align-items: center;
+        .SubText {
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+      }
+      
+      .EmailContainer{
+        display: none;
+      }
+
+      .FormContainer {
+        .OtpFormInput {
+          justify-content: space-evenly;
+
+          .OtpInput {
+            width: 180px;
+            height: 90px;
+            font-size: 36px;
+            margin: 0 4px;
+          }
+        }
+
+        .ButtonsContainer {
+          .SubmitButton {
+            height: 72px;
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .RightContainer {
+    margin-top: 24px;
+    padding: 0 16px;
+
+    .BemFicaTitle {
+      font-size: 28px;
+    }
+
+    .StepsContainer {
+      height: 14px;
+      margin-top: 10px;
+    }
+
+    .MainContainer {
+      margin: 16px 0;
+
+      .MainTitles {
+        margin-bottom: 24px;
+
+        .MainText {
+          font-size: 28px;
+        }
+
+        .SubText {
+          font-size: 14px;
+        }
+      }
+
+      .EmailContainer {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .FormContainer {
+        .OtpFormInput {
+          .OtpInput {
+            width: 60px;
+            height: 70px;
+            font-size: 28px;
+            margin: 0 3px;
+          }
+        }
+
+        .InfoContainer {
+          font-size: 13px;
+          margin-bottom: 3vh;
+        }
+
+        .ButtonsContainer {
+          .SubmitButton {
+            height: 60px;
+            font-size: 22px;
+            margin-bottom: 40px;
+          }
+
+          .ResendButton {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
