@@ -8,6 +8,6 @@ createRoot(document.getElementById('root')!).render(
   <BrowserRouter basename='/bemfica'>
     <StrictMode>
       <App />
-    </StrictMode>,
+    </StrictMode>
   </BrowserRouter>
 )
