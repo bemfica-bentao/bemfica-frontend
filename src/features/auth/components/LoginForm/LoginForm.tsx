@@ -10,7 +10,7 @@ export default function LoginForm() {
                         <span>Bemfica</span>
                     </div>
                     <button className="GoBackBtn">
-                        <a href="/MainScreen"><i className="fa-solid fa-arrow-left"></i></a>
+                        <a href="/bemfica/home"><i className="fa-solid fa-arrow-left"></i></a>
                     </button>
                 </div>
 
@@ -42,7 +42,7 @@ export default function LoginForm() {
                         </div>
 
                         <button className="LogInBtn">Entrar</button>
-                        <a href="/registro" className="RegisterLink">Não tem uma conta? Registre-se</a>
+                        <a href="/bemfica/registro" className="RegisterLink">Não tem uma conta? Registre-se</a>
                     </div>
                 </main>
             </div>
