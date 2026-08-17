@@ -4,7 +4,7 @@ export default function LandingPage() {
     return (
         <div className="LandingPage">
             <header className="LandingHeader">
-                <a className="LandingLogo" href="/bemfica/home">
+                <a className="LandingLogo" href="/home">
                     <i className="fa-solid fa-utensils" aria-hidden="true"></i>
                     <span>bemfica</span>
                 </a>
@@ -16,8 +16,8 @@ export default function LandingPage() {
                 </nav>
 
                 <div className="HeaderActions">
-                    <a className="HeaderLogin" href="/bemfica/login">Entrar</a>
-                    <a className="HeaderCta" href="/bemfica/registro">Criar conta</a>
+                    <a className="HeaderLogin" href="/login">Entrar</a>
+                    <a className="HeaderCta" href="/registro">Criar conta</a>
                 </div>
             </header>
 
@@ -35,10 +35,10 @@ export default function LandingPage() {
                         </p>
 
                         <div className="HeroCtas">
-                            <a className="PrimaryBtn" href="/bemfica/registro">
+                            <a className="PrimaryBtn" href="/registro">
                                 Criar conta <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </a>
-                            <a className="SecondaryBtn" href="/bemfica/login">Entrar</a>
+                            <a className="SecondaryBtn" href="/login">Entrar</a>
                         </div>
 
                         <ul className="HeroStats">
@@ -201,10 +201,10 @@ export default function LandingPage() {
                             Encontre seu cardápio adaptado e comece a receber os avisos do seu perfil alimentar.
                         </p>
                         <div className="CtaButtons">
-                            <a className="PrimaryBtn" href="/bemfica/registro">
+                            <a className="PrimaryBtn" href="/registro">
                                 Criar conta <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </a>
-                            <a className="SecondaryBtn Dark" href="/bemfica/login">Entrar</a>
+                            <a className="SecondaryBtn Dark" href="/login">Entrar</a>
                         </div>
                     </div>
                 </section>
