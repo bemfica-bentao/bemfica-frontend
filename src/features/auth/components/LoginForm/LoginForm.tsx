@@ -1,5 +1,5 @@
 import './LoginForm.scss';
-
+import { Link } from 'react-router-dom';
 export default function LoginForm() {
     return (
         <div className="LoginPage">
@@ -10,7 +10,7 @@ export default function LoginForm() {
                         <span>Bemfica</span>
                     </div>
                     <button className="GoBackBtn">
-                        <a href="/bemfica/"><i className="fa-solid fa-arrow-left"></i></a>
+                        <Link to="/"><i className="fa-solid fa-arrow-left"></i></Link>
                     </button>
                 </div>
 
@@ -30,7 +30,7 @@ export default function LoginForm() {
                         </div>
 
                         <div className="InputGroup">
-                            <a href="/esqueceu" className="ForgotLink">Esqueceu sua senha?</a>
+                            <Link to="/esqueceu" className="ForgotLink">Esqueceu sua senha?</Link>
                             <fieldset>
                                 <legend>Senha</legend>
                                 <div className="InputContent">
@@ -42,7 +42,7 @@ export default function LoginForm() {
                         </div>
 
                         <button className="LogInBtn">Entrar</button>
-                        <a href="/bemfica/registro" className="RegisterLink">Não tem uma conta? Registre-se</a>
+                        <Link to="/registro" className="RegisterLink">Não tem uma conta? Registre-se</Link>
                     </div>
                 </main>
             </div>

@@ -1,13 +1,14 @@
 import './LandingPage.scss';
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
     return (
         <div className="LandingPage">
             <header className="LandingHeader">
-                <a className="LandingLogo" href="/home">
+                <Link className="LandingLogo" to="/home">
                     <i className="fa-solid fa-utensils" aria-hidden="true"></i>
                     <span>bemfica</span>
-                </a>
+                </Link>
 
                 <nav className="LandingNav" aria-label="Seções da página">
                     <a href="#problema">O problema</a>
@@ -16,8 +17,8 @@ export default function LandingPage() {
                 </nav>
 
                 <div className="HeaderActions">
-                    <a className="HeaderLogin" href="/login">Entrar</a>
-                    <a className="HeaderCta" href="/registro">Criar conta</a>
+                    <Link className="HeaderLogin" to="/login">Entrar</Link>
+                    <Link className="HeaderCta" to="/registro">Criar conta</Link>
                 </div>
             </header>
 
@@ -35,10 +36,10 @@ export default function LandingPage() {
                         </p>
 
                         <div className="HeroCtas">
-                            <a className="PrimaryBtn" href="/registro">
+                            <Link className="PrimaryBtn" to="/registro">
                                 Criar conta <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                            <a className="SecondaryBtn" href="/login">Entrar</a>
+                            </Link>
+                            <Link className="SecondaryBtn" to="/login">Entrar</Link>
                         </div>
 
                         <ul className="HeroStats">
@@ -201,10 +202,10 @@ export default function LandingPage() {
                             Encontre seu cardápio adaptado e comece a receber os avisos do seu perfil alimentar.
                         </p>
                         <div className="CtaButtons">
-                            <a className="PrimaryBtn" href="/registro">
+                            <Link className="PrimaryBtn" to="/registro">
                                 Criar conta <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                            <a className="SecondaryBtn Dark" href="/login">Entrar</a>
+                            </Link>
+                            <Link className="SecondaryBtn Dark" to="/login">Entrar</Link>
                         </div>
                     </div>
                 </section>

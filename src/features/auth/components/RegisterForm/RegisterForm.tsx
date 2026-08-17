@@ -1,4 +1,5 @@
 import './RegisterForm.scss';
+import { Link } from 'react-router-dom';
 
 export default function RegisterForm() {
     return (
@@ -10,7 +11,7 @@ export default function RegisterForm() {
                         <span>Bemfica</span>
                     </div>
                     <button className="GoBackBtn">
-                        <a href="/bemfica/login"><i className="fa-solid fa-arrow-left"></i></a>
+                        <Link to="/login"><i className="fa-solid fa-arrow-left"></i></Link>
                     </button>
                 </div>
 
@@ -122,7 +123,7 @@ export default function RegisterForm() {
 
                         {/* <i class="fa-solid fa-file-arrow-up"></i> */}
 
-                        <button className="SubmitInBtn" type="submit"><a href="/bemfica/status" className="RegisterSubmit"> Enviar Registro <i className="fa-solid fa-arrow-right"></i></a></button>
+                        <button className="SubmitInBtn" type="submit"><Link to="/status" className="RegisterSubmit"> Enviar Registro <i className="fa-solid fa-arrow-right"></i></Link></button>
                     </form>
                 </main>
             </div>

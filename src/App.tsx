@@ -11,12 +11,12 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage/>} />
-      <Route path="/home" element={<LandingPage/>} />
-      <Route path="/otp" element={<OtpVerificationForm/>} />
-      <Route path="/status" element={<TimeLineForm />}/>      
-      <Route path="/verify" element={<ReceivedForm />}/>
-      <Route path="/login" element={<LoginForm/>}/>
-      <Route path="/registro" element={<RegisterForm/>}/>
+      <Route path="/bemfica-frontend/home" element={<LandingPage/>} />
+      <Route path="/bemfica-frontend/otp" element={<OtpVerificationForm/>} />
+      <Route path="/bemfica-frontend/status" element={<TimeLineForm />}/>      
+      <Route path="/bemfica-frontend/verify" element={<ReceivedForm />}/>
+      <Route path="/bemfica-frontend/login" element={<LoginForm/>}/>
+      <Route path="/bemfica-frontend/registro" element={<RegisterForm/>}/>
     </Routes>
   )
 }
