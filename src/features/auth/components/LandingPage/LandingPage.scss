@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700;800&display=swap');
+
+/* Tokens reaproveitados de auth/components (ver Logs/01-design-tokens.md) */
+$ColorPurple1: #7E45AF;
+$ColorPurple2: #5D4870;
+$ColorPurple3: #302D33;
+$ColorPurple4: #2B2233;
+$ColorPurple5: #BD97CD;
+$ColorPurple6: #E4D9EB;
+$ColorCreme:   #F2EDE4;
+$ColorCremeLight: #F4EFE8;
+$ColorGray: #C0BBC5;
+$ColorDark: #2C2536;
+$ColorLogo: #634B7A;
+$ColorPrimaryLight: #8C5FB2;
+$ColorBtn: #715787;
+$ColorBtnHover: #59426D;
+$ColorText: #333333;
+$ColorTextSoft: #888888;
+$ColorTextMuted: #A098AE;
+$ColorLink: #BFA8D8;
+$ColorBorder: #B3A9A3;
+/* Ajuste de contraste AA sobre fundo creme (familia de cinzas do projeto, ver log) */
+$ColorTextSecondary: #666666;
+
+$ContainerMax: 1080px;
+$Radius: 12px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.LandingPage {
+    background-color: $ColorCremeLight;
+    color: $ColorText;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5;
+}
+
+#problema,
+#solucao,
+#publico {
+    scroll-margin-top: 88px;
+}
+
+/* =========================================
+   ELEMENTOS COMPARTILHADOS
+   ========================================= */
+.Eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $ColorPurple1;
+    margin-bottom: 16px;
+}
+
+.PrimaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: $ColorPurple1;
+    color: #FFFFFF;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px 24px;
+    border: none;
+    border-radius: $Radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    i {
+        font-size: 0.875rem;
+    }
+
+    &:hover {
+        background-color: $ColorBtnHover;
+    }
+}
+
+.SecondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $ColorPurple2;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px 24px;
+    border: 1px solid $ColorBorder;
+    border-radius: $Radius;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        border-color: $ColorPurple1;
+        color: $ColorPurple1;
+    }
+
+    &.Dark {
+        border-color: $ColorPurple5;
+        color: $ColorCreme;
+
+        &:hover {
+            background-color: $ColorPurple2;
+            border-color: $ColorPurple5;
+            color: $ColorCreme;
+        }
+    }
+}
+
+.Decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .circle-1 {
+        width: 450px;
+        height: 450px;
+        background: $ColorPrimaryLight;
+        top: -40px;
+        right: -300px;
+    }
+
+    .circle-2 {
+        width: 400px;
+        height: 400px;
+        background: #9D75C0;
+        opacity: 0.8;
+        top: -220px;
+        right: 200px;
+    }
+
+    .circle-3 {
+        width: 350px;
+        height: 350px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        top: -150px;
+        right: 180px;
+    }
+
+    .circle-4 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        bottom: -100px;
+        right: -50px;
+    }
+
+    .circle-5 {
+        width: 250px;
+        height: 250px;
+        background: rgba(140, 95, 178, 0.3);
+        bottom: -100px;
+        right: 180px;
+    }
+
+    .circle-6 {
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        bottom: -150px;
+        right: 350px;
+    }
+}
+
+.FeatureCard {
+    background-color: $ColorCreme;
+    border: 1px solid $ColorBorder;
+    border-radius: $Radius;
+    padding: 24px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        border-color: $ColorPurple5;
+        transform: translateY(-4px);
+    }
+
+    > i {
+        display: inline-block;
+        font-size: 1.75rem;
+        color: $ColorPurple1;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $ColorPurple2;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 0.9375rem;
+        color: $ColorTextSecondary;
+    }
+
+    &.Future {
+        background-color: transparent;
+        border-style: dashed;
+
+        > i {
+            opacity: 0.5;
+        }
+
+        h3 {
+            color: $ColorTextSecondary;
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+.FutureTag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $ColorPurple1;
+    border: 1px solid $ColorPurple5;
+    border-radius: 30px;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.LandingHeader {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 20px;
+    background-color: $ColorCremeLight;
+    border-bottom: 1px solid $ColorBorder;
+
+    .LandingLogo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: $ColorLogo;
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-decoration: none;
+
+        i {
+            font-size: 1.375rem;
+            color: $ColorPurple1;
+        }
+    }
+
+    .LandingNav {
+        display: none;
+        gap: 28px;
+
+        a {
+            color: $ColorTextSecondary;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $ColorPurple1;
+            }
+        }
+    }
+
+    .HeaderActions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .HeaderLogin {
+        display: none;
+        color: $ColorPurple2;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            color: $ColorPurple1;
+        }
+    }
+
+    .HeaderCta {
+        display: inline-flex;
+        align-items: center;
+        background-color: $ColorPurple1;
+        color: #FFFFFF;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: $Radius;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $ColorBtnHover;
+        }
+    }
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.Hero {
+    display: flex;
+    flex-direction: column;
+
+    .HeroContent {
+        padding: 56px 20px 48px;
+        max-width: 560px;
+
+        .HeroTitle {
+            font-size: clamp(2.25rem, 6vw, 3.7rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: $ColorText;
+            margin-bottom: 20px;
+
+            .Highlight {
+                color: $ColorPurple1;
+            }
+
+            .Dot {
+                color: $ColorPurple5;
+            }
+        }
+
+        .HeroSubtitle {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            color: $ColorTextSecondary;
+            max-width: 46ch;
+            margin-bottom: 32px;
+        }
+
+        .HeroCtas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .HeroStats {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li {
+                display: flex;
+                align-items: baseline;
+                gap: 12px;
+                border-left: 3px solid $ColorPurple5;
+                padding-left: 16px;
+
+                strong {
+                    font-size: 1.75rem;
+                    font-weight: 800;
+                    color: $ColorPurple1;
+                    white-space: nowrap;
+                }
+
+                span {
+                    font-size: 0.875rem;
+                    color: $ColorTextSecondary;
+                }
+            }
+        }
+    }
+
+    .HeroPanel {
+        position: relative;
+        overflow: hidden;
+        background-color: $ColorDark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 72px 20px;
+
+        .MenuCard {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 320px;
+            background-color: $ColorCreme;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+            .MenuCardHeader {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 1.125rem;
+                font-weight: 800;
+                color: $ColorPurple2;
+                padding-bottom: 12px;
+                margin-bottom: 12px;
+                border-bottom: 1px solid $ColorPurple6;
+
+                i {
+                    color: $ColorPurple1;
+                    font-size: 1.25rem;
+                }
+            }
+
+            .MenuCardList {
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px 0;
+                    border-bottom: 1px dashed $ColorPurple6;
+                    color: $ColorText;
+                    font-size: 0.9375rem;
+
+                    i {
+                        color: $ColorPurple1;
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+
+            .MenuCardBadge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 16px;
+                background-color: $ColorPurple6;
+                color: $ColorPurple2;
+                font-size: 0.8125rem;
+                font-weight: 700;
+                padding: 8px 14px;
+                border-radius: 30px;
+
+                i {
+                    color: $ColorPurple1;
+                }
+            }
+        }
+    }
+}
+
+/* =========================================
+   SEÇÕES
+   ========================================= */
+.Section {
+    padding: 72px 20px;
+
+    .SectionInner {
+        max-width: $ContainerMax;
+        margin: 0 auto;
+    }
+
+    .SectionHeader {
+        margin-bottom: 40px;
+
+        .SectionTitle {
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            color: $ColorText;
+            max-width: 24ch;
+        }
+    }
+}
+
+.SectionProblem {
+    background-color: $ColorCremeLight;
+}
+
+.SectionSolution {
+    background-color: $ColorCreme;
+}
+
+.SectionAudience {
+    background-color: $ColorCremeLight;
+}
+
+.ProblemGrid,
+.SolutionGrid,
+.AudienceGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* =========================================
+   CTA FINAL
+   ========================================= */
+.SectionCta {
+    position: relative;
+    overflow: hidden;
+    background-color: $ColorDark;
+    padding: 88px 20px;
+    text-align: center;
+
+    .CtaContent {
+        position: relative;
+        z-index: 2;
+        max-width: 680px;
+        margin: 0 auto;
+
+        .Eyebrow {
+            color: $ColorPurple5;
+        }
+
+        .CtaTitle {
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            color: $ColorCreme;
+            margin-bottom: 16px;
+
+            .Highlight {
+                color: $ColorPurple5;
+            }
+        }
+
+        .CtaSubtitle {
+            color: $ColorPurple6;
+            font-size: 1.0625rem;
+            margin-bottom: 36px;
+        }
+
+        .CtaButtons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.LandingFooter {
+    background-color: $ColorPurple4;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+
+    .FooterBrand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: $ColorCreme;
+    }
+
+    .FooterTag {
+        color: $ColorPurple6;
+        font-size: 0.9375rem;
+    }
+
+    .FooterMeta {
+        color: $ColorTextMuted;
+        font-size: 0.8125rem;
+        margin-top: 8px;
+    }
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+@media (min-width: 768px) {
+    .LandingHeader {
+        padding: 14px 40px;
+
+        .LandingNav {
+            display: flex;
+        }
+
+        .HeaderLogin {
+            display: inline-block;
+        }
+    }
+
+    .Hero {
+        .HeroContent {
+            padding: 80px 40px 64px;
+            max-width: 640px;
+        }
+
+        .HeroStats {
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        .HeroPanel {
+            padding: 88px 40px;
+        }
+    }
+
+    .Section {
+        padding: 96px 40px;
+    }
+
+    .ProblemGrid,
+    .SolutionGrid,
+    .AudienceGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .SectionCta {
+        padding: 112px 40px;
+    }
+
+    .LandingFooter {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+@media (min-width: 1024px) {
+    .Hero {
+        flex-direction: row;
+        min-height: calc(100vh - 64px);
+
+        .HeroContent {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 96px 64px;
+            max-width: 640px;
+        }
+
+        .HeroPanel {
+            flex: 1;
+            padding: 64px;
+        }
+    }
+
+    .ProblemGrid,
+    .AudienceGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .SolutionGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================
+   ACESSIBILIDADE
+   ========================================= */
+a:focus-visible {
+    outline: 3px solid $ColorPurple5;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
